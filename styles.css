@@ -31,6 +31,16 @@ body {
   padding: 0;
   color: #222;
 }
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('img/JS_20170303_0743_preview.jpg'); /* path to your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
 
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
