@@ -1,8 +1,9 @@
-/* Global Styles */
+/* Base Styles */
 body {
   font-family: "Proxima Nova", "Avenir", sans-serif;
   color: #333;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
   background-image: url('img/JS_20170303_0743_preview.png');
   background-size: cover;
   background-position: center;
@@ -10,9 +11,8 @@ body {
   background-repeat: no-repeat;
 }
 
-/* HERO SECTION */
+/* Hero Section */
 .hero {
-  background: rgba(255, 255, 255, 0.2); /* optional overlay tint */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -21,11 +21,14 @@ body {
 }
 
 .overlay {
-  background: rgba(0, 64, 35, 0.55); /* dark green overlay */
+  background: rgba(0, 64, 35, 0.55);
   padding: 2rem;
   text-align: center;
   color: white;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 .content h1 {
@@ -34,13 +37,16 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   color: #FFC907;
+  transition: transform 0.3s ease;
+}
+
+.content h1:hover {
+  transform: scale(1.05);
 }
 
 .content p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  max-width: 600px;
-  margin-inline: auto;
   color: #ffffff;
 }
 
@@ -48,19 +54,20 @@ body {
   background-color: #FFC907;
   color: #333;
   padding: 0.75rem 1.5rem;
-  text-decoration: none;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .cta-button:hover {
   background-color: #e6b800;
+  transform: scale(1.05);
 }
 
-/* STORY SECTION */
+/* Story Section */
 .story {
   padding: 4rem 1rem;
   background-color: rgba(255, 255, 255, 0.9);
@@ -76,17 +83,66 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #8BD1CB;
+  transition: transform 0.3s ease;
+}
+
+.story h2:hover {
+  transform: scale(1.05);
 }
 
 .story p {
   color: #333;
+  font-size: 1.1rem;
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
   background-color: #8BD1CB;
   color: #1a3f3a;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.25rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .story h2 {
+    font-size: 1.5rem;
+  }
+
+  .story p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay {
+    padding: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 1.75rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    display: inline-block;
+  }
 }
